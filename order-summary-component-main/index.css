@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Hat Display;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  background-image: url(../order-summary-component-main/images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  height: 712px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+}
+.image {
+  display: flex;
+}
+.img {
+  border-radius: 12px 12px 0 0;
+}
+
+.text {
+  width: 100%;
+  max-width: 450px;
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(225, 100%, 98%);
+  height: 492px;
+  border-radius: 0 0 1.2em 1.2em;
+}
+
+.title {
+  font-weight: bolder;
+}
+
+.title-p {
+  width: 100%;
+  height: 100px;
+  color: var(--light);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1.2rem;
+  color: rgb(101, 101, 101);
+}
+
+.container-subscription {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: hsla(285, 23%, 50%, 0.03);
+  box-shadow: 15px 15px 80px -25px rgba(0, 0, 0, 0.15);
+  border-radius: 1em;
+  height: 100px;
+  padding: 20px;
+}
+.plan-text,
+.plan,
+.cancel-buttom,
+.payment-buttom {
+  border: none;
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.subscription {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.plan-text {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  font-weight: 100;
+}
+
+.plan {
+  display: flex;
+  color: hsl(245, 89%, 60%);
+  background-color: hsla(285, 23%, 50%, 0.03);
+  box-shadow: 15px 15px 80px -25px rgba(0, 0, 0, 0.15);
+  text-decoration: underline;
+  align-items: center;
+  border: none;
+}
+
+.cancel-buttom,
+.payment-buttom {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.9rem;
+}
+.plan:hover {
+  background-color: hsla(285, 23%, 50%, 0.03);
+  box-shadow: 15px 15px 80px -25px rgba(0, 0, 0, 0.15);
+  color: hsla(245, 87%, 65%, 0.809);
+}
+.payment-buttom:hover {
+  background-color: hsla(245, 87%, 65%, 0.809);
+}
+.payment-buttom {
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(225, 100%, 98%);
+}
+
+.cancel-buttom {
+  background-color: hsl(225, 100%, 98%);
+  color: rgb(101, 101, 101);
+}
+.cancel-buttom:hover {
+  color: hsl(223, 47%, 23%);
+}
+button {
+  cursor: pointer;
+}
