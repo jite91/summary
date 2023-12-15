@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <header>
+      <h2>calc</h2>
+      <div class="designTroggleMain">
+        <p class="theme">THEME</p>
+        <div class="designToggle">
+          <div class="themeNumber">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+
+          <div class="theme-toggle" >
+            <label class="custom-radio-button">
+              <input
+                onclick="setTheme('one')"
+                type="radio"
+                name="toggle-state"
+                id="first"
+                checked
+              />
+              <span class="checkMark"></span>
+            </label>
+
+            <label class="custom-radio-button">
+              <input
+                onclick="setTheme('two')"
+                type="radio"
+                name="toggle-state"
+                id="second"
+              />
+              <span class="checkMark"></span>
+            </label>
+            <label class="custom-radio-button">
+              <input
+                onclick="setTheme ('three')"
+                type="radio"
+                name="toggle-state"
+                id="third"
+              />
+              <span class="checkMark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <p class="js-input" id="input"> 
+  </p>
+    <main>
+      
+
+        <div class="small">
+          <button
+            class="box"
+            onclick="
+            updateCalculation('7')"
+          >
+            7
+          </button>
+          <button
+            class="box"
+            onclick="
+            updateCalculation('8')"
+          >
+            8
+          </button>
+          <button
+            class="box"
+            onclick="
+            updateCalculation('9')"
+          >
+            9
+          </button>
+          <button 
+          onclick="
+            calculation = calculation.slice(0,-1)
+            
+            display();
+            localStorage.setItem('calculation', calculation);
+          "
+          class="box" id="del">del</button>
+        </div>
+        <div class="small">
+          <button
+            class="box"
+            onclick="
+            updateCalculation('4')"
+          >
+            4
+          </button>
+          <button
+            class="box"
+            onclick="
+            updateCalculation('5')"
+          >
+            5
+          </button>
+          <button
+           class="box"
+            onclick="
+            updateCalculation('6')"
+          >
+            6
+          </button>
+          <button
+           class="box"
+            onclick="
+            updateCalculation('+')"
+          >
+            +
+          </button>
+        </div>
+        <div class="small">
+          <button
+          class="box"
+            onclick="
+            updateCalculation('1')"
+          >
+            1
+          </button>
+          <button
+          class="box"
+            onclick="
+            updateCalculation('2')"
+          >
+            2
+          </button>
+          <button
+          class="box"
+            onclick="
+            updateCalculation('3')"
+          >
+            3
+          </button>
+          <button
+          class="box"
+            onclick="
+            updateCalculation('-')"
+          >
+            -
+          </button>
+        </div>
+        <div class="small">
+          <button
+          class="box"
+            onclick="
+            updateCalculation('.')"
+          >
+            .
+          </button>
+          <button
+          class="box"
+            onclick="
+            updateCalculation('0')"
+          >
+            0
+          </button>
+          <button
+          class="box"
+            onclick="
+            updateCalculation(' / ');
+          "
+          >
+            /
+          </button>
+          <button
+          class="box"
+            onclick="
+            updateCalculation(' * ');
+          "
+          >
+            x
+          </button>
+        </div>
+      
+      
+        <div class="medium">
+
+          <button
+            id="reset"
+            class="box"
+            onclick="
+            calculation = '';
+            
+            display();
+            localStorage.setItem('calculation', calculation);
+          "
+          >
+            reset
+          </button>
+          <button
+            id="equal"
+            class="box"
+            onclick="
+            calculation = eval(calculation);
+            display();
+            localStorage.setItem('calculation', calculation);
+          "
+          >
+            =
+          </button>
+    
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
